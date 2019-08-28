@@ -9,18 +9,23 @@ namespace CA_Petshop.Infrastructure.Data
 {
    public class FakeDataBase
     {
-        public static List<Pet> _pets = new List<Pet>();
+        private static List<Pet> _pets = new List<Pet>();
         public static int _idCounter = 0;
-        public static IEnumerable<Pet> _pp;
+        public static IEnumerable<Pet> _pp = _pets;
 
         public static void InitData()
         {
-            _pets.ToList().Add(new Pet()
+            _pets.Add(new Pet()
             {
-                Birthdate = DateTime.Today, ID = _idCounter++, Name = "Sweetý", Color = "White", Price = 8000, race = Pet.Race.Fox
+                Birthdate = DateTime.Today,
+                ID = _idCounter++,
+                Name = "Sweetý",
+                Color = "White",
+                Price = 8000,
+                race = Pet.Race.Fox
             });
 
-            _pp = _pets;
+            
         }
 
 
