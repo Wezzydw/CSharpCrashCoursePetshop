@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Petshop", "CA_Petshop\CA_Petshop.csproj", "{468DC67A-86CC-49EA-9726-9CED33B91034}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F1568051-DEE9-4F0F-83D7-CFDF44F0B440}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core.Entity", "Core.Entity", "{5A875B28-9D03-476A-AF15-25E1BAFAE129}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure.Data", "Infrastructure.Data", "{FCFD12E9-745C-4C65-A7B2-F82A1E7CAD75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{8301DABC-3886-4914-8775-0CC395FE8274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Petshop.Core", "CA_Petshop.Core\CA_Petshop.Core.csproj", "{D895E98A-B08A-45FD-9C94-70C374095863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Petshop.Core.Entity", "CA_Petshop.Core.Entity\CA_Petshop.Core.Entity.csproj", "{AF370581-201D-4639-BB3D-E2BA5623CC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Petshop.Infrastructure.Data", "CA_Petshop.Infrastructure.Data\CA_Petshop.Infrastructure.Data.csproj", "{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Petshop.ConsoleMenu", "CA_Petshop.ConsoleMenu\CA_Petshop.ConsoleMenu.csproj", "{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +25,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{468DC67A-86CC-49EA-9726-9CED33B91034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{468DC67A-86CC-49EA-9726-9CED33B91034}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{468DC67A-86CC-49EA-9726-9CED33B91034}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{468DC67A-86CC-49EA-9726-9CED33B91034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D895E98A-B08A-45FD-9C94-70C374095863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D895E98A-B08A-45FD-9C94-70C374095863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D895E98A-B08A-45FD-9C94-70C374095863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D895E98A-B08A-45FD-9C94-70C374095863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF370581-201D-4639-BB3D-E2BA5623CC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF370581-201D-4639-BB3D-E2BA5623CC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF370581-201D-4639-BB3D-E2BA5623CC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF370581-201D-4639-BB3D-E2BA5623CC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D895E98A-B08A-45FD-9C94-70C374095863} = {F1568051-DEE9-4F0F-83D7-CFDF44F0B440}
+		{AF370581-201D-4639-BB3D-E2BA5623CC24} = {5A875B28-9D03-476A-AF15-25E1BAFAE129}
+		{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB} = {FCFD12E9-745C-4C65-A7B2-F82A1E7CAD75}
+		{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6} = {8301DABC-3886-4914-8775-0CC395FE8274}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26C1BC4A-6D6F-48BB-913E-B88E4C91647F}
