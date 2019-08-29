@@ -14,6 +14,8 @@ namespace CA_Petshop.Core.Entity
         public String PreviousOwner { get; set; }
         public double Price { get; set; }
         public Race race { get; set; }
+
+
         public enum Race
         {
             Cat, Dog, Goat, Rabbit, Fox
