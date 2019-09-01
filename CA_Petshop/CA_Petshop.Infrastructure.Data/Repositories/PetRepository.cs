@@ -13,10 +13,6 @@ namespace CA_Petshop.Infrastructure.Data.Repositories
         {
             FakeDataBase.InitData();
         }
-        public int GetNextId()
-        {
-            throw new NotImplementedException();
-        }
 
         public IEnumerable<Pet> ReadPets()
         {
