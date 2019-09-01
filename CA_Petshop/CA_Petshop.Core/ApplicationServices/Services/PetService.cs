@@ -30,8 +30,6 @@ namespace CA_Petshop.Core.ApplicationServices.Services
         public void CreatePet(Pet pet)
         {
             _petRepository.CreatePet(pet);
-            _petRepository.ReadPets().ToList().Sort((pet1, pet2) => pet1.Price.CompareTo(pet2.Price));
-
         }
 
         public void DeletePet(int id)
