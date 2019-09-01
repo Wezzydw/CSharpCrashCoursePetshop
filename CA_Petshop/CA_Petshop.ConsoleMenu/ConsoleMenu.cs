@@ -28,7 +28,7 @@ namespace CA_Petshop.ConsoleMenu
         private void MakeMenuItems()
         {
             menuItemsList.Add("Show all pets");
-            menuItemsList.Add("Search all pets");
+            menuItemsList.Add("Search for pet type");
             menuItemsList.Add("Create new pet");
             menuItemsList.Add("Delete pet");
             menuItemsList.Add("Update pet");
@@ -43,6 +43,12 @@ namespace CA_Petshop.ConsoleMenu
                 case 1:
                     ShowAllPets();
                     break;
+                case 2:
+                    FindType();
+                    break;
+                case 3:
+                    CreatePet();
+                    break;
                 default:
                     Print("Choose one of the numbers");
                     MakeSelection(WaitForInt());
@@ -50,23 +56,85 @@ namespace CA_Petshop.ConsoleMenu
             }
         }
 
+        private void CreatePet()
+        {
+            ClearConsole();
+            Print("Type name");
+            string name = WaitForString();
+            Print("Type color");
+            string color = WaitForString();
+            Print("Type price");
+            double price = WaitForInt();
+            Print("Type Race");
+            Pet.Race race = SelectType();
+            Print("Type PrevOwner");
+            string prewOwner = WaitForString();
+            Print("Type birthDate in the format : 01-01-2001");
+            string birthDate = WaitForString();
+            Print("Type soldDate in the format : 01-01-2001");
+            string soldDate = WaitForString();
+            
+            Pet newPet = new Pet()
+            {
+                Name = name,
+                Color = color,
+                Birthdate = DateTime.Parse(birthDate),
+                SoldDate = DateTime.Parse(soldDate),
+                PreviousOwner = prewOwner,
+                race = race,
+                Price = price
+            };
+
+            _petService.CreatePet(newPet);
+            WaitForContinue();
+        }
+        
+        private void FindType()
+        {
+
+            DisplayList(_petService.SearchPets(SelectType()));
+            WaitForContinue();
+        }
+
+        private Pet.Race SelectType()
+        {
+            ClearConsole();
+            Print("Select a number");
+            int i = 1;
+            foreach (Pet.Race race in Enum.GetValues(typeof(Pet.Race)))
+            {
+                Print($"{i}: {race}");
+                i++;
+            }
+
+            int number = -1;
+            while (number < 0 || number > Enum.GetValues(typeof(Pet.Race)).Length)
+            {
+                number = WaitForInt();
+            }
+            Pet.Race selected = (Pet.Race)Enum.GetValues(typeof(Pet.Race)).GetValue(number - 1);
+            return selected;
+        }
+
         private void ShowAllPets()
         {
             DisplayList(_petService.GetPets());
             WaitForContinue();
-            ClearConsole();
-            ShowMainMenu();
+            
         }
 
         private void ClearConsole()
         {
             Console.Clear();
+
         }
 
         private void WaitForContinue()
         {
             Print("Press enter to return");
             Console.ReadLine();
+            ClearConsole();
+            ShowMainMenu();
         }
 
         private void DisplayList(List<Pet> pets)
@@ -74,9 +142,9 @@ namespace CA_Petshop.ConsoleMenu
             ClearConsole();
             foreach (Pet pet in pets)
             {
-                Print($"ID: {pet.ID}, Name:{pet.Name}, Color: {pet.Color}, " +
-                      $"Birthdate: {pet.Birthdate}, Price: {pet.Price}, " +
-                      $"Sold: {pet.SoldDate}, Prev Owner: {pet.PreviousOwner} ");
+                Print($"ID: {pet.ID}, Name: {pet.Name}, Color: {pet.Color}, Type: {pet.race}, " +
+                      $"Birthdate: {pet.Birthdate:d}, Price: {pet.Price}, " +
+                      $"Sold: {pet.SoldDate:d}, Prev Owner: {pet.PreviousOwner} ");
             }
         }
 
@@ -108,6 +176,11 @@ namespace CA_Petshop.ConsoleMenu
             {
                 return -1;
             }
+        }
+
+        private string WaitForString()
+        {
+            return Console.ReadLine();
         }
 
     }

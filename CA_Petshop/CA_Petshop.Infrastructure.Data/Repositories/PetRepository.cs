@@ -24,7 +24,8 @@ namespace CA_Petshop.Infrastructure.Data.Repositories
 
         public void CreatePet(Pet pet)
         {
-            throw new NotImplementedException();
+            pet.ID = FakeDataBase._idCounter++;
+            FakeDataBase._pets.Add(pet);
         }
 
         public void DeletePet(Pet pet)

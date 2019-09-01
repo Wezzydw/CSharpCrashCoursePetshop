@@ -22,14 +22,14 @@ namespace CA_Petshop.Core.ApplicationServices.Services
             return _petRepository.ReadPets().ToList();
         }
 
-        public List<Pet> SearchPets()
+        public List<Pet> SearchPets(Enum petEnum)
         {
-            throw new NotImplementedException();
+            return _petRepository.ReadPets().Where(pet => pet.race.Equals(petEnum)).ToList();
         }
 
         public void CreatePet(Pet pet)
         {
-            throw new NotImplementedException();
+            _petRepository.CreatePet(pet);
         }
 
         public void DeletePet(Pet pet)
