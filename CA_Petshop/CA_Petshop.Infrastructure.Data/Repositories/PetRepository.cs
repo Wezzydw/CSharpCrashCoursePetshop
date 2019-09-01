@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using CA_Petshop.Core.DomainServices;
 using CA_Petshop.Core.Entity;
@@ -28,14 +29,33 @@ namespace CA_Petshop.Infrastructure.Data.Repositories
             FakeDataBase._pets.Add(pet);
         }
 
-        public void DeletePet(Pet pet)
+        public void DeletePet(int id)
         {
-            throw new NotImplementedException();
+            int index = -1;
+            for (int i = 0; i < FakeDataBase._pets.Count; i++)
+            {
+                if (FakeDataBase._pets[i].ID.Equals(id))
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            FakeDataBase._pets.RemoveAt(index);
         }
 
         public void UpdatePet(int id, Pet pet)
         {
-            throw new NotImplementedException();
+            pet.ID = id;
+            for (int i = 0; i < FakeDataBase._pets.Count; i++)
+            {
+                if (FakeDataBase._pets[i].ID.Equals(id))
+                {
+                    FakeDataBase._pets[i] = pet;
+                    break;
+                }
+            }
+
         }
     }
 }

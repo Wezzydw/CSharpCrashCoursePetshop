@@ -30,26 +30,30 @@ namespace CA_Petshop.Core.ApplicationServices.Services
         public void CreatePet(Pet pet)
         {
             _petRepository.CreatePet(pet);
+            _petRepository.ReadPets().ToList().Sort((pet1, pet2) => pet1.Price.CompareTo(pet2.Price));
+
         }
 
-        public void DeletePet(Pet pet)
+        public void DeletePet(int id)
         {
-            throw new NotImplementedException();
+            _petRepository.DeletePet(id);
         }
 
         public void UpdatePet(int id, Pet pet)
         {
-            throw new NotImplementedException();
+            _petRepository.UpdatePet(id, pet);
         }
 
         public List<Pet> SortPetsByPrice()
         {
-            throw new NotImplementedException();
+            List<Pet> toSort = GetPets();
+            toSort.Sort((pet1, pet2) => pet1.Price.CompareTo(pet2.Price));
+            return toSort;
         }
 
         public List<Pet> Get5CheapestPets()
         {
-            throw new NotImplementedException();
+            return SortPetsByPrice().GetRange(0, 5);
         }
 
 

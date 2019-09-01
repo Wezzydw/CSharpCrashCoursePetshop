@@ -10,7 +10,7 @@ namespace CA_Petshop.Core.ApplicationServices
         List<Pet> GetPets();
         List<Pet> SearchPets(Enum petEnum);
         void CreatePet(Pet pet);
-        void DeletePet(Pet pet);
+        void DeletePet(int id);
         void UpdatePet(int id, Pet pet);
         List<Pet> SortPetsByPrice();
         List<Pet> Get5CheapestPets();

@@ -11,7 +11,7 @@ namespace CA_Petshop.Core.DomainServices
 
         void CreatePet(Pet pet);
 
-        void DeletePet(Pet pet);
+        void DeletePet(int id);
 
         void UpdatePet(int id, Pet pet);
 
