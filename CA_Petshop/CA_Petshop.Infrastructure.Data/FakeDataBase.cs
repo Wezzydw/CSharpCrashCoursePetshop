@@ -7,7 +7,7 @@ using CA_Petshop.Core.Entity;
 
 namespace CA_Petshop.Infrastructure.Data
 {
-   public class FakeDataBase
+   public static class FakeDataBase
     {
         public static List<Pet> _pets = new List<Pet>();
         public static int _idCounter = 0;
@@ -15,6 +15,7 @@ namespace CA_Petshop.Infrastructure.Data
 
         public static void InitData()
         {
+
             _pets.Add(new Pet()
             {
                 Birthdate = DateTime.Parse("28-03-2019"),

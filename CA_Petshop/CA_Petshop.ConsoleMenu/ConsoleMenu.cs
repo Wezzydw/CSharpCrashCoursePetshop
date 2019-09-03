@@ -111,6 +111,7 @@ namespace CA_Petshop.ConsoleMenu
                 PreviousOwner = prewOwner,
                 race = race,
                 Price = price
+                
             };
             _petService.UpdatePet(id, newPet);
 

@@ -9,10 +9,6 @@ namespace CA_Petshop.Infrastructure.Data.Repositories
 {
    public class PetRepository: IPetRepository
     {
-        public PetRepository()
-        {
-            FakeDataBase.InitData();
-        }
 
         public IEnumerable<Pet> ReadPets()
         {
