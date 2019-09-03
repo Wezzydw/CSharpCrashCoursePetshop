@@ -10,7 +10,7 @@ namespace CA_Petshop.Infrastructure.Data
    public static class FakeDataBase
     {
         public static List<Pet> _pets = new List<Pet>();
-        public static int _idCounter = 0;
+        public static int _idCounter = 1;
         public static IEnumerable<Pet> _pp = _pets;
 
         public static void InitData()

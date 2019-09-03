@@ -34,15 +34,15 @@ namespace UI.RestAPI.Controllers
         }
 
         // PUT api/pets/anyID
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Pet pet)
+        [HttpPut]
+        public void Put([FromQuery]int id, [FromBody] Pet pet)
         {
             _petService.UpdatePet(id,pet);
         }
 
         // DELETE api/pets/anyID
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public void Delete([FromQuery] int id)
         {
             _petService.DeletePet(id);
         }
