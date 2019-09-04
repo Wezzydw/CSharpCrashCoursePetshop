@@ -12,6 +12,7 @@ namespace CA_Petshop.Infrastructure.Data
         public static List<Pet> _pets = new List<Pet>();
         public static int _idCounter = 1;
         public static IEnumerable<Pet> _pp = _pets;
+        public static List<Owner> _Owners = new List<Owner>();
 
         public static void InitData()
         {
