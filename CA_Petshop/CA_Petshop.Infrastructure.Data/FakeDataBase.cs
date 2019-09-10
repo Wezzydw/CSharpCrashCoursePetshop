@@ -13,10 +13,11 @@ namespace CA_Petshop.Infrastructure.Data
         public static int _idCounter = 1;
         public static IEnumerable<Pet> _pp = _pets;
         public static List<Owner> _Owners = new List<Owner>();
+        public static int _idOwner = 1;
+
 
         public static void InitData()
         {
-
             _pets.Add(new Pet()
             {
                 Birthdate = DateTime.Parse("28-03-2019"),
@@ -25,7 +26,10 @@ namespace CA_Petshop.Infrastructure.Data
                 Color = "White",
                 Price = 8000,
                 race = Pet.Race.Fox
-                , PreviousOwner = "None",
+                , PreviousOwner = new Owner()
+                    { Id = _idOwner++, 
+                        Name = "Tanketorsk"
+                }
                 
             });
             _pets.Add(new Pet()
@@ -35,7 +39,10 @@ namespace CA_Petshop.Infrastructure.Data
                 Name = "Frank",
                 Color = "Black",
                 Price = 80000,
-                race = Pet.Race.Dog, PreviousOwner = "MiB", SoldDate = DateTime.Parse("02-07-1997"),
+                race = Pet.Race.Dog, PreviousOwner = new Owner()
+                {
+                    Id = _idOwner++, Name = "Marcipan"
+                }, SoldDate = DateTime.Parse("02-07-1997"),
             });
             _pets.Add(new Pet()
             {

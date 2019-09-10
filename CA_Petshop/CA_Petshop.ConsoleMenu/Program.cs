@@ -12,6 +12,7 @@ namespace CA_Petshop.ConsoleMenu
     {
         static void Main(string[] args)
         {
+            FakeDataBase.InitData();
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddScoped<IPetRepository, PetRepository>();
             serviceCollection.AddScoped<IPetService, PetService>();
@@ -19,8 +20,8 @@ namespace CA_Petshop.ConsoleMenu
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var menu = serviceProvider.GetRequiredService<IConsoleMenu>();
-            FakeDataBase.InitData();
-            //menu.Run();
+            
+            menu.Run();
         }
     }
 }

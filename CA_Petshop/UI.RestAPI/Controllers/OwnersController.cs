@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using CA_Petshop.Core.ApplicationServices;
 using CA_Petshop.Core.Entity;
@@ -17,6 +19,7 @@ namespace UI.RestAPI.Controllers
 
         public OwnerController(IOwnerService ownerService)
         {
+            
             _ownerService = ownerService;
         }
 

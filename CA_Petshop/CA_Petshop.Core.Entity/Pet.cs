@@ -11,7 +11,7 @@ namespace CA_Petshop.Core.Entity
         public DateTime Birthdate { get; set; }
         public DateTime SoldDate { get; set; }
         public String Color { get; set; }
-        public String PreviousOwner { get; set; }
+        public Owner PreviousOwner { get; set; }
         public double Price { get; set; }
         public Race race { get; set; }
 
