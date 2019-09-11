@@ -108,7 +108,7 @@ namespace CA_Petshop.ConsoleMenu
                 Color = color,
                 Birthdate = DateTime.Parse(birthDate),
                 SoldDate = DateTime.Parse(soldDate),
-                PreviousOwner = prewOwner,
+                
                 race = race,
                 Price = price
                 
@@ -151,7 +151,7 @@ namespace CA_Petshop.ConsoleMenu
                 Color = color,
                 Birthdate = DateTime.Parse(birthDate),
                 SoldDate = DateTime.Parse(soldDate),
-                PreviousOwner = prewOwner,
+                
                 race = race,
                 Price = price
             };

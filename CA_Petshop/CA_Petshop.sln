@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CA_Petshop.Infrastructure.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CA_Petshop.ConsoleMenu", "CA_Petshop.ConsoleMenu\CA_Petshop.ConsoleMenu.csproj", "{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.RestAPI", "UI.RestAPI\UI.RestAPI.csproj", "{E867A6FA-C4CC-4B32-9DC7-BD1C3490B5F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.RestAPI", "UI.RestAPI\UI.RestAPI.csproj", "{E867A6FA-C4CC-4B32-9DC7-BD1C3490B5F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Petshop.Infrastructure.Data.SQL", "CA_Petshop.Infrastructure.Data.SQL\CA_Petshop.Infrastructure.Data.SQL.csproj", "{63DA52DC-48E4-4D39-B5AF-371C5678B76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{E867A6FA-C4CC-4B32-9DC7-BD1C3490B5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E867A6FA-C4CC-4B32-9DC7-BD1C3490B5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E867A6FA-C4CC-4B32-9DC7-BD1C3490B5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63DA52DC-48E4-4D39-B5AF-371C5678B76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63DA52DC-48E4-4D39-B5AF-371C5678B76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63DA52DC-48E4-4D39-B5AF-371C5678B76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63DA52DC-48E4-4D39-B5AF-371C5678B76D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{75DB2688-6E08-4C51-A368-C2AB9BB7A6FB} = {FCFD12E9-745C-4C65-A7B2-F82A1E7CAD75}
 		{D7A7D395-45D3-43ED-96C4-BFBBB5D2EFF6} = {8301DABC-3886-4914-8775-0CC395FE8274}
 		{E867A6FA-C4CC-4B32-9DC7-BD1C3490B5F9} = {8301DABC-3886-4914-8775-0CC395FE8274}
+		{63DA52DC-48E4-4D39-B5AF-371C5678B76D} = {FCFD12E9-745C-4C65-A7B2-F82A1E7CAD75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26C1BC4A-6D6F-48BB-913E-B88E4C91647F}
