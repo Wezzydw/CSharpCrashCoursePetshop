@@ -14,7 +14,7 @@ namespace CA_Petshop.Core.Entity
         public Owner PreviousOwner { get; set; }
         public double Price { get; set; }
         public Race race { get; set; }
-
+    
 
         public enum Race
         {
