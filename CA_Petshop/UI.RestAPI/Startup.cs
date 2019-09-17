@@ -46,6 +46,14 @@ namespace UI.RestAPI
         {
             if (env.IsDevelopment())
             {
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<PetshopContext>();
+                    context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
+                    DBfiller.Seed(context);
+                }
+
                 app.UseDeveloperExceptionPage();
             }
             else
