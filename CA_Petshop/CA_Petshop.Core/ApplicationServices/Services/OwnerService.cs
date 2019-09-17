@@ -6,7 +6,7 @@ using CA_Petshop.Core.Entity;
 
 namespace CA_Petshop.Core.ApplicationServices.Services
 {
-    class OwnerService: IOwnerService
+    public class OwnerService: IOwnerService
     {
         private IOwnerRepository _ownerRepository;
         public OwnerService(IOwnerRepository ownerRepository)

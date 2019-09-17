@@ -34,6 +34,9 @@ namespace UI.RestAPI
         {
             services.AddScoped<IPetRepository, PetSQLRepository>();
             services.AddScoped<IPetService, PetService>();
+            services.AddScoped<IOwnerRepository, OwnerSQLRepository>();
+            services.AddScoped<IOwnerService, OwnerService>();
+
             services.AddDbContext<PetshopContext>(opt => opt.UseSqlite("Data Source=Petshop.db"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
