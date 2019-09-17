@@ -79,6 +79,31 @@ namespace CA_Petshop.Infrastructure.Data.SQL
                 race = Pet.Race.Rabbit
             });
 
+            context.Add(new Owner()
+            {
+                Name = "Tester"
+            });
+
+            context.Add(new Owner()
+            {
+                Name = "Lars"
+            });
+
+            context.Add(new Owner()
+            {
+                Name = "Peter"
+            });
+
+            context.Add(new Owner()
+            {
+                Name = "Jeppe"
+            });
+
+            context.Add(new Owner()
+            {
+                Name = "Lårs"
+            });
+
             context.SaveChanges();
         }
     }

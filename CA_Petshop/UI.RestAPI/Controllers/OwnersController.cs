@@ -13,11 +13,11 @@ namespace UI.RestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OwnerController : ControllerBase
+    public class OwnersController : ControllerBase
     {
         private readonly IOwnerService _ownerService;
 
-        public OwnerController(IOwnerService ownerService)
+        public OwnersController(IOwnerService ownerService)
         {
             
             _ownerService = ownerService;
