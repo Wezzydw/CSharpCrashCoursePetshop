@@ -17,8 +17,7 @@ namespace CA_Petshop.Infrastructure.Data.SQL
                 Name = "Sweetý",
                 Color = "White",
                 Price = 8000,
-                race = Pet.Race.Fox
-                ,
+                race = Pet.Race.Fox,
                 PreviousOwner = new Owner()
                 {
                     

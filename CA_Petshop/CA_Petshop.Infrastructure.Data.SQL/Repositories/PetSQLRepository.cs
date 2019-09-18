@@ -42,7 +42,12 @@ namespace CA_Petshop.Infrastructure.Data.SQL.Repositories
 
         public void UpdatePet(int id, Pet pet)
         {
-            throw new NotImplementedException();
+            Pet pet2 = _context.pets.ToList().Find(pp => pp.ID == id);
+            pet.ID = id;
+            pet2.Name = pet.Name;
+            //_context.Update(pet2).State = EntityState.Modified;
+            _context.SaveChanges();
+            
         }
     }
 }
