@@ -15,7 +15,7 @@ namespace UI.RestAPI
     {
         public static void Main(string[] args)
         {
-            FakeDataBase.InitData();
+            //FakeDataBase.InitData();
             CreateWebHostBuilder(args).Build().Run();
         }
 

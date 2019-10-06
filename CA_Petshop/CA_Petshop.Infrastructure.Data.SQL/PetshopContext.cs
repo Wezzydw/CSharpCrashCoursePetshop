@@ -13,6 +13,13 @@ namespace CA_Petshop.Infrastructure.Data.SQL
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Pet>()
+                .HasOne(o => o.PreviousOwner);
+        }
+
         public DbSet<Pet> pets { get; set; }
         public DbSet<Owner> owners { get; set; }
     }
